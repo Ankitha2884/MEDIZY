@@ -13,7 +13,7 @@
             <h1 class="logo"><img src="images/logo.png" alt="MEDZY Logo"> MEDZY</h1>
             <button class="menu-btn" onclick="toggleMenu()">☰</button>
             <nav class="menu">
-                <ul>
+                <ul id="menuList">
                     <li><a href="profile.html">My Account</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="careers.html">Careers</a></li>
@@ -27,29 +27,38 @@
     </header>
     <main>
         <div class="container">
-            <h2>Our Products</h2>
-            <div class="product-list">
-                <div class="product-item">
-                    <img src="images/product1.jpg" alt="Product 1">
-                    <p>Product 1</p>
-                    <p>₹100</p>
-                    <label for="quantity1">Quantity:</label>
-                    <input type="number" id="quantity1" name="quantity1" min="1" max="10" value="1">
-                    <button onclick="addToCart(1, 100)">Add to Cart</button>
+            <section class="hero">
+                <h2>Welcome to MEDZY</h2>
+                <p>Your one-stop solution for quick and reliable medicine delivery.</p>
+            </section>
+            <section class="products">
+                <h2>Our Products</h2>
+                <div class="product-list">
+                    <div class="product-item">
+                        <img src="images/medicine1.jpg" alt="Medicine 1">
+                        <h3>Medicine 1</h3>
+                        <p>₹100</p>
+                        <div class="quantity-control">
+                            <button onclick="decreaseQuantity(1)">-</button>
+                            <input type="number" id="quantity1" value="1" min="1" max="10">
+                            <button onclick="increaseQuantity(1)">+</button>
+                        </div>
+                        <button onclick="addToCart(1, 100)">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/medicine2.jpg" alt="Medicine 2">
+                        <h3>Medicine 2</h3>
+                        <p>₹150</p>
+                        <div class="quantity-control">
+                            <button onclick="decreaseQuantity(2)">-</button>
+                            <input type="number" id="quantity2" value="1" min="1" max="10">
+                            <button onclick="increaseQuantity(2)">+</button>
+                        </div>
+                        <button onclick="addToCart(2, 150)">Add to Cart</button>
+                    </div>
+                    <!-- Add more products as needed -->
                 </div>
-                <div class="product-item">
-                    <img src="images/product2.jpg" alt="Product 2">
-                    <p>Product 2</p>
-                    <p>₹200</p>
-                    <label for="quantity2">Quantity:</label>
-                    <input type="number" id="quantity2" name="quantity2" min="1" max="10" value="1">
-                    <button onclick="addToCart(2, 200)">Add to Cart</button>
-                </div>
-                <!-- Add more product items as needed -->
-            </div>
-        </div>
-        <div class="cart">
-            <button onclick="checkout()">Checkout</button>
+            </section>
         </div>
     </main>
     <footer>
