@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77b300 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+}
+
+header .logo img {
+    height: 50px;
+    vertical-align: middle;
+}
+
+header .menu-btn {
+    display: none;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+header nav ul li a:hover {
+    color: #77b300;
+}
+
+.login-container, .container main {
+    padding: 20px;
+    background: #f4f4f4;
+    margin-top: 20px;
+}
+
+.login-container form label, .login-container form input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.login-container form input {
+    padding: 10px;
+}
+
+.login-container form button {
+    background: #77b300;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: calc(33.333% - 40px);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-item button {
+    background: #77b300;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.cart button {
+    background: #77b300;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    header .menu-btn {
+        display: block;
+        background: #77b300;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    
+    header nav ul {
+        display: none;
+        flex-direction: column;
+    }
+    
+    header nav ul li {
+        margin: 0;
+    }
+    
+    .product-item {
+        width: calc(100% - 40px);
+    }
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
