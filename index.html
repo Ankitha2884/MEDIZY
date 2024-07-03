@@ -9,69 +9,58 @@
 </head>
 <body>
     <!-- Top Bar -->
-    <header>
-        <div class="top-bar">
-            <div class="top-bar-left">
-                <p>Bengaluru,Chennai,Hyderabad,Home Delivery in 15 Mins & Store Pickup Also Available</p>
-            </div>
-            <div class="top-bar-right">
-                <a href="tel:7892637210">Call +91 7892637210 for help!</a>
-                <a href="#">Store Finder</a>
-                <a href="#">Download App</a>
-                <a href="login.html">Login / Sign Up</a>
-            </div>
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <img src="logo.png" alt="MEDZY Logo" class="logo">
+            <span>6/56, Bhavani Nagar, Moosapet, Hyderabad</span>
         </div>
-        <!-- Main Header -->
-        <div class="main-header">
-            <div class="logo">
-                <img src="images/logo.png" alt="MEDZY Logo">
-                <span>MEDZY</span>
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Search for... General or Pharma products">
-                <button>Search</button>
-            </div>
-            <div class="cart">
-                <a href="cart.html"><img src="images/cart.png" alt="Cart"></a>
-            </div>
+        <div class="top-bar-right">
+            <span>Call 7892637210 for help!</span>
+            <span>Store Finder</span>
+            <span>Download App</span>
+            <span>Login / Sign Up</span>
         </div>
-        <!-- Navigation Bar -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="offers.html">Offers</a></li>
-                <li><a href="profile.html">My Account</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="help.html">Need Help?</a></li>
-                <li><a href="login.html">Logout</a></li>
-            </ul>
-        </nav>
-    </header>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search for... General or Pharma products">
+        <button>Search</button>
+    </div>
 
     <!-- Main Content -->
-    <main>
+    <div class="main-content">
+        <!-- Banner -->
         <div class="banner">
-            <img src="images/banner.jpg" alt="Banner Image">
-        </div>
-        <section class="products">
-            <h2>Shop by Category</h2>
-            <div class="product-grid">
-                <div class="product-item">
-                    <img src="images/medicine1.jpg" alt="Medicine 1">
-                    <h3>Medicine 1</h3>
-                    <p>₹100</p>
-                    <div class="quantity-control">
-                        <button onclick="decreaseQuantity(1)">-</button>
-                        <input type="number" id="quantity1" value="1" min="1" max="10">
-                        <button onclick="increaseQuantity(1)">+</button>
-                    </div>
-                    <button onclick="addToCart(1, 100)">Add to Cart</button>
-                </div>
-                <!-- Repeat for other products -->
+            <img src="banner-image.jpg" alt="Banner">
+            <div class="banner-text">
+                <h1>MedPlus Advantage</h1>
+                <p>Cardiac CT (128 Slice) ₹4,801 (all inclusive) ₹15,756</p>
+                <p>Gachibowli | Habsiguda | Kompally | Nallagandla | Kukatpally</p>
             </div>
-        </section>
-    </main>
+        </div>
+
+        <!-- Upload Order Section -->
+        <div class="upload-order">
+            <button>Upload for Order</button>
+            <button>Need help with Ordering? Call 7892637210</button>
+        </div>
+
+        <!-- Shop by Category -->
+        <div class="shop-category">
+            <h2>Shop by Category</h2>
+            <div class="category-list">
+                <div class="category-item">
+                    <img src="category1.jpg" alt="Category 1">
+                    <p>Category 1</p>
+                </div>
+                <div class="category-item">
+                    <img src="category2.jpg" alt="Category 2">
+                    <p>Category 2</p>
+                </div>
+                <!-- Add more categories as needed -->
+            </div>
+        </div>
+    </div>
 </body>
 </html>
