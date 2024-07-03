@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDZY - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <!-- Top Bar -->
+    <header>
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <p>6/56, Bhavani Nagar, Moosapet, Hyderabad, Home Delivery & Store Pickup Available</p>
+            </div>
+            <div class="top-bar-right">
+                <a href="tel:040-67006700">Call 040-67006700 for help!</a>
+                <a href="#">Store Finder</a>
+                <a href="#">Download App</a>
+                <a href="login.html">Login / Sign Up</a>
+            </div>
+        </div>
+        <!-- Main Header -->
+        <div class="main-header">
+            <div class="logo">
+                <img src="images/logo.png" alt="MEDZY Logo">
+                <span>MEDZY</span>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for... General or Pharma products">
+                <button>Search</button>
+            </div>
+            <div class="cart">
+                <a href="cart.html"><img src="images/cart.png" alt="Cart"></a>
+            </div>
+        </div>
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="offers.html">Offers</a></li>
+                <li><a href="profile.html">My Account</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="help.html">Need Help?</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="banner">
+            <img src="images/banner.jpg" alt="Banner Image">
+        </div>
+        <section class="products">
+            <h2>Shop by Category</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="images/medicine1.jpg" alt="Medicine 1">
+                    <h3>Medicine 1</h3>
+                    <p>₹100</p>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity(1)">-</button>
+                        <input type="number" id="quantity1" value="1" min="1" max="10">
+                        <button onclick="increaseQuantity(1)">+</button>
+                    </div>
+                    <button onclick="addToCart(1, 100)">Add to Cart</button>
+                </div>
+                <!-- Repeat for other products -->
+            </div>
+        </section>
+    </main>
+</body>
+</html>
