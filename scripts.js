@@ -1,22 +1,19 @@
-function increaseQuantity(id) {
-    let quantityInput = document.getElementById(`quantity${id}`);
-    let currentQuantity = parseInt(quantityInput.value);
-    if (currentQuantity < 10) {
-        quantityInput.value = currentQuantity + 1;
-    }
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+    const cartButton = document.querySelector('.add-to-cart');
+    const cart = document.querySelector('.cart');
+    const checkoutButton = document.querySelector('.checkout');
+    
+    menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
 
-function decreaseQuantity(id) {
-    let quantityInput = document.getElementById(`quantity${id}`);
-    let currentQuantity = parseInt(quantityInput.value);
-    if (currentQuantity > 1) {
-        quantityInput.value = currentQuantity - 1;
-    }
-}
+    cartButton.addEventListener('click', () => {
+        cart.classList.add('active');
+    });
 
-function addToCart(id, price) {
-    let quantityInput = document.getElementById(`quantity${id}`);
-    let quantity = parseInt(quantityInput.value);
-    let totalPrice = quantity * price;
-    alert(`Added ${quantity} item(s) to the cart. Total price: ₹${totalPrice}`);
-}
+    checkoutButton.addEventListener('click', () => {
+        alert('Proceeding to checkout');
+    });
+});
